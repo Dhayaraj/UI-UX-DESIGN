@@ -103,6 +103,7 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5.5rem;
+    overflow-x: hidden;
   }
 
   body {
@@ -111,7 +112,10 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    max-width: 100%;
   }
+
 
   h1,
   h2,
