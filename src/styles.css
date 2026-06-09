@@ -6,7 +6,7 @@
 
 /*
  * Jeevi Academy — UI/UX Course landing page design system.
- * Premium dark theme, glassmorphism, orange glow accents.
+ * Premium dark theme, glassmorphism, blue glow accents.
  * All color values use the brand palette below.
  */
 
@@ -69,8 +69,8 @@
   --popover: #0e1422;
   --popover-foreground: #f8fafc;
 
-  --primary: #ffab2d;
-  --primary-foreground: #070a12;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
 
   --secondary: #0e1422;
   --secondary-foreground: #f8fafc;
@@ -78,8 +78,8 @@
   --muted: #0e1422;
   --muted-foreground: #a7b0c0;
 
-  --accent: #ffab2d;
-  --accent-foreground: #070a12;
+  --accent: #3b82f6;
+  --accent-foreground: #ffffff;
 
   --destructive: #ef4444;
   --destructive-foreground: #f8fafc;
@@ -92,7 +92,7 @@
 
   --border: #273044;
   --input: #273044;
-  --ring: #ffab2d;
+  --ring: #3b82f6;
 }
 
 @layer base {
@@ -140,13 +140,13 @@
 }
 
 @utility glass-strong {
-  background: color-mix(in oklab, var(--surface) 85%, transparent);
+  background: color-mix(in oklab, var(--surface) 97%, transparent);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid color-mix(in oklab, var(--border) 90%, transparent);
 }
 
-/* Orange glow halo */
+/* Blue glow halo */
 @utility glow {
   box-shadow: var(--shadow-glow);
 }

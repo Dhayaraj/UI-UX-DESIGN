@@ -32,11 +32,11 @@ export function SiteFooter() {
           <a href={CONTACT.phoneHref} className="flex items-center gap-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground">
             <Phone className="h-4 w-4 text-primary" /> {CONTACT.phoneDisplay}
           </a>
-          <a href="mailto:info@jeeviacademy.com" className="flex items-center gap-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground">
-            <Mail className="h-4 w-4 text-primary" /> info@jeeviacademy.com
+          <a href={CONTACT.emailHref} className="flex items-center gap-2.5 text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <Mail className="h-4 w-4 text-primary" /> {CONTACT.email}
           </a>
           <p className="flex items-start gap-2.5 text-sm text-muted-foreground">
-            <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> Chennai, Tamil Nadu, India
+            <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> {CONTACT.address}
           </p>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import { Download, MessageCircle, ShieldCheck, Sparkles, Star, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CONTACT } from "@/lib/landing-config";
-import heroImg from "@/assets/hero-dashboard.jpg";
+import heroImg from "@/assets/hero-dashboard.png";
 
 const badges = [
-  { icon: Star, label: "4.8/5 learner rating" },
+  { icon: Star, label: "4.9/5 learner rating" },
   { icon: Users, label: "3,500+ trained" },
   { icon: ShieldCheck, label: "Certification included" },
 ];

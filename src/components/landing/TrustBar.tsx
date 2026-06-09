@@ -1,7 +1,7 @@
 const stats = [
   { value: "3,500+", label: "Learners trained" },
   { value: "120+", label: "Portfolio projects shipped" },
-  { value: "4.8/5", label: "Average learner rating" },
+  { value: "4.9/5", label: "Average learner rating" },
   { value: "30+", label: "Hiring partners" },
 ];
 
