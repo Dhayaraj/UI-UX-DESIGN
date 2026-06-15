@@ -19,14 +19,15 @@ import { PlacementSection } from "@/components/landing/PlacementSection";
 import { FeesSection } from "@/components/landing/FeesSection";
 import { FaqSection } from "@/components/landing/FaqSection";
 import { FinalCtaSection } from "@/components/landing/FinalCtaSection";
+import { PricingCtaSection } from "@/components/landing/PricingCtaSection";
 import { StickyMobileCta } from "@/components/landing/StickyMobileCta";
 import { SiteFooter } from "@/components/landing/SiteFooter";
 import { FAQS } from "@/components/landing/faq-data";
 
 const CANONICAL = "https://www.jeeviacademy.com/ui-ux-design-course-in-chennai/";
-const TITLE = "UI UX Design Course in Chennai | Practical UI UX Training with Portfolio";
+const TITLE = "UI UX Design Course in Chennai";
 const DESCRIPTION =
-  "Join Jeevi Academy's UI UX Design Course in Chennai. Learn Figma, wireframing, prototyping, user research, portfolio projects, certification, online/offline training, and placement assistance.";
+  "Jeevi Academy offers the best UI UX design course in Chennai. Learn Figma, wireframing, prototyping, user research, portfolio projects, certification, online/offline training, and placement assistance.";
 
 const courseSchema = {
   "@context": "https://schema.org",
@@ -121,6 +122,7 @@ function Index() {
         <PlacementSection />
         <FeesSection />
         <FaqSection />
+        <PricingCtaSection />
         <FinalCtaSection />
       </main>
       <SiteFooter />

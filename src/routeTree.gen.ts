@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as InstructorRouteImport } from './routes/instructor'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApiLeadsUiuxRouteImport } from './routes/api/leads/uiux'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InstructorRoute = InstructorRouteImport.update({
+  id: '/instructor',
+  path: '/instructor',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -31,30 +37,34 @@ const ApiLeadsUiuxRoute = ApiLeadsUiuxRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/instructor': typeof InstructorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/leads/uiux': typeof ApiLeadsUiuxRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/instructor': typeof InstructorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/leads/uiux': typeof ApiLeadsUiuxRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/instructor': typeof InstructorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/api/leads/uiux': typeof ApiLeadsUiuxRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml' | '/api/leads/uiux'
+  fullPaths: '/' | '/instructor' | '/sitemap.xml' | '/api/leads/uiux'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml' | '/api/leads/uiux'
-  id: '__root__' | '/' | '/sitemap.xml' | '/api/leads/uiux'
+  to: '/' | '/instructor' | '/sitemap.xml' | '/api/leads/uiux'
+  id: '__root__' | '/' | '/instructor' | '/sitemap.xml' | '/api/leads/uiux'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  InstructorRoute: typeof InstructorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiLeadsUiuxRoute: typeof ApiLeadsUiuxRoute
 }
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/instructor': {
+      id: '/instructor'
+      path: '/instructor'
+      fullPath: '/instructor'
+      preLoaderRoute: typeof InstructorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  InstructorRoute: InstructorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiLeadsUiuxRoute: ApiLeadsUiuxRoute,
 }

@@ -23,8 +23,8 @@ export function HeroSection() {
           </span>
 
           <h1 className="text-4xl font-extrabold leading-[1.08] sm:text-5xl lg:text-[3.4rem]">
-            UI UX Design Course in Chennai with{" "}
-            <span className="text-primary text-glow">Practical Portfolio Training</span>
+            UI/UX Design Course {" "}
+            <span className="text-primary text-glow">at Jeevi Academy, Chennai</span>
           </h1>
 
           <p className="max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
